@@ -1,5 +1,14 @@
+	<div class="sidebar-main">		
+		<div class="sidebar-widget">
+				<div class="search-main">
+					<form action="" method="get">
+						<input class="search-txt" type="text" name="serch" value="Поиск" onfocus="if(this.value=='Поиск')this.value=''" onblur="if(this.value=='')this.value='Поиск'"/>
+						<input type="image" src="<?php bloginfo('template_url'); ?>/images/search-btn.jpg" />
+					</form>
+				</div>
+			</div>
 			<div class="sidebar-widget">
-				<ul class="ads-main">
+				<ul id="ads-main">
 					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/ads1.jpg" alt=""/></a></li>
 					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/ads2.jpg" alt=""/></a></li>
 					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/ads3.jpg" alt=""/></a></li>
@@ -60,3 +69,4 @@
 				</div>
 			</div>
 		</div>
+	</div>

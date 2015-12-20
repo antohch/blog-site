@@ -10,12 +10,16 @@ function load_style_script(){
 }
 
 
-/*
-Загружаем скрипты и стили
+/**
+* загружаем скрипты и стили
 */
 add_action('wp_enqueue_scripts', 'load_style_script');
 
-
+/**
+* поддержка миниатюр
+*/
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(180,180);
 /*
 Добавляем виджиты
 */
