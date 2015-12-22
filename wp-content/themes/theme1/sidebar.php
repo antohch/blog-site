@@ -2,7 +2,7 @@
 		<div class="sidebar-widget">
 				<div class="search-main">
 					<form action="" method="get">
-						<input class="search-txt" type="text" name="serch" value="Поиск" onfocus="if(this.value=='Поиск')this.value=''" onblur="if(this.value=='')this.value='Поиск'"/>
+						<input class="search-txt" type="text" name="s" value="Поиск" onfocus="if(this.value=='Поиск')this.value=''" onblur="if(this.value=='')this.value='Поиск'"/>
 						<input type="image" src="<?php bloginfo('template_url'); ?>/images/search-btn.jpg" />
 					</form>
 				</div>
