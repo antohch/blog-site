@@ -38,3 +38,11 @@ register_sidebar(array(
 	'after_widget'  => '</li>',
 	'before_title'  => '<h2 class="widgettitle">',
 	'after_title'   => '</h2>' );*/
+register_sidebar(array(
+					'name' => 'Sidebar', 
+					'id' => 'sidebar', 
+					'before_widget' => '<div class="sidebar-widget %2$s">',
+					'after_widget'  => '</div>',
+					'before_title'  => '<h3>',
+					'after_title'   => '</h3>',
+					));

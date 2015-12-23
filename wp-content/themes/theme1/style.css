@@ -261,3 +261,10 @@ body{
 	.by-st{
 		float:right;
 	}
+	
+.widget_categories li{
+	float:left; width:50%; 
+}
+.sidebar-widget li{
+	margin: 0 0 10px 0;
+}

@@ -7,6 +7,12 @@
 					</form>
 				</div>
 			</div>
+			<?php if(!dynamic_sidebar('sidebar')): ?>
+			<div class="sidebar-widget">
+			<h3>Здесь виджеты сайдбара</h3>
+			</div>
+			<?php endif; ?>
+			<!--
 			<div class="sidebar-widget">
 				<ul id="ads-main">
 					<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/ads1.jpg" alt=""/></a></li>
@@ -63,6 +69,7 @@
 					<img src="<?php bloginfo('template_url'); ?>/images/latest-post1.jpg" alt="" /><a href="#">Request a quote form PSD in 3 colors</a>
 				</p>
 			</div>
+			-->
 			<div class="sidebar-widget">
 				<div class="facebook">
 					<img src="<?php bloginfo('template_url'); ?>/images/facebook.jpg" alt=""/>
