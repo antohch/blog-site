@@ -1,15 +1,28 @@
+<?php /*
+Template Name: Вывод всех записей
+*/
+?>
 <?php get_header();?>
 <div class="content-wrapper">
 	<div class="content-main">
 		<div class="content">
-			<div id='slideshowHolder'>    
-				<img src="<?php bloginfo('template_url'); ?>/images/img1.jpg" alt='' />            
-				<img src="<?php bloginfo('template_url'); ?>/images/img1.jpg" alt='' />            
-				<img src="<?php bloginfo('template_url'); ?>/images/img1.jpg" alt='' />            
-			</div>
+<?php 
+$posts = get_posts(array(
+				'numberposts' => 0,
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				'nopaging' => false,
+));
+query_posts(array('post_type'=>'','paged' => get_query_var('paged')));
+?>
+
+
+<?php foreach($posts as $post): setup_postdata($post);?>
+
+<?php endforeach;?>
+
 <?php if(have_posts()): while(have_posts()): the_post();?>
 <div class="articles">
-            	
 	<div class="articles-gen-img">
 		<a href="<?php the_permalink(); ?>">
 		<?php if(has_post_thumbnail()): ?>
@@ -32,11 +45,16 @@
 </div>
 <?php endwhile; ?>
 <?php endif?>
+
+
+
+
+
 			<div class="pager">
 				<?php posts_nav_link("<span> - </span>");?>
 			</div>
 		</div>
-
+<?php wp_reset_postdata();?>
 			<?php get_sidebar();?>
 
 	</div>
