@@ -54,3 +54,77 @@ register_sidebar(array(
 					'before_title'  => '<h3>',
 					'after_title'   => '</h3>',
 					));
+					
+/*
+* Банер
+*/
+function banner_posts(){
+  $labels = array(
+	'name' => 'Баннеры', // Основное название типа записи
+	'singular_name' => 'Баннер', // отдельное название записи типа Book
+	'add_new' => 'Добавить новый',
+	'add_new_item' => 'Добавить новый баннер',
+	'edit_item' => 'Редактировать баннер',
+	'new_item' => 'Новый баннер',
+	'view_item' => 'Посмотреть баннер',
+	'search_items' => 'Найти баннер',
+	'not_found' =>  'Банер не найден',
+	'not_found_in_trash' => 'В корзине баннер не найдено',
+	'parent_item_colon' => '',
+	'menu_name' => 'Баннеры'
+
+  );
+  $args = array(
+	'labels' => $labels,
+	'public' => true,
+	'publicly_queryable' => true,
+	'show_ui' => true,
+	'show_in_menu' => true,
+	'query_var' => true,
+	'rewrite' => true,
+	'capability_type' => 'post',
+	'has_archive' => true,
+	'hierarchical' => false,
+	'menu_position' => null,
+	'supports' => array('title','thumbnail')
+  );
+	register_post_type('banner',$args);
+}
+add_action('init', 'banner_posts');
+
+/*
+* Слайдер
+*/
+function slid_posts(){
+  $labels = array(
+	'name' => 'Слайдеры', // Основное название типа записи
+	'singular_name' => 'Слайдер', // отдельное название записи типа Book
+	'add_new' => 'Добавить новый',
+	'add_new_item' => 'Добавить новый слайдер',
+	'edit_item' => 'Редактировать слайдер',
+	'new_item' => 'Новый слайдер',
+	'view_item' => 'Посмотреть слайдер',
+	'search_items' => 'Найти слайдер',
+	'not_found' =>  'Слайдер не найден',
+	'not_found_in_trash' => 'В корзине слайдер не найдено',
+	'parent_item_colon' => '',
+	'menu_name' => 'Слайдеры'
+
+  );
+  $args = array(
+	'labels' => $labels,
+	'public' => true,
+	'publicly_queryable' => true,
+	'show_ui' => true,
+	'show_in_menu' => true,
+	'query_var' => true,
+	'rewrite' => true,
+	'capability_type' => 'post',
+	'has_archive' => true,
+	'hierarchical' => false,
+	'menu_position' => null,
+	'supports' => array('title','thumbnail', 'editor')
+  );
+	register_post_type('slider',$args);
+}
+add_action('init', 'slid_posts');
