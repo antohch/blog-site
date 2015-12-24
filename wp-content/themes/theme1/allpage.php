@@ -7,21 +7,17 @@ Template Name: Вывод всех записей
 	<div class="content-main">
 		<div class="content">
 <?php 
-$posts = get_posts(array(
-				'numberposts' => 0,
-				'post_type' => 'post',
-				'post_status' => 'publish',
-				'nopaging' => false,
-));
-query_posts(array('post_type'=>'','paged' => get_query_var('paged')));
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array(
+			'paged' => $paged,
+			'post_type' => 'post',
+			'nopaging' => false,
+			'posts_per_page'=> 0,
+			'post_status' => 'publish',
+			);
+$the_query = new WP_Query($args);
 ?>
-
-
-<?php foreach($posts as $post): setup_postdata($post);?>
-
-<?php endforeach;?>
-
-<?php if(have_posts()): while(have_posts()): the_post();?>
+<?php if($the_query->have_posts()): while($the_query->have_posts()): $the_query->the_post();?>
 <div class="articles">
 	<div class="articles-gen-img">
 		<a href="<?php the_permalink(); ?>">
@@ -36,27 +32,18 @@ query_posts(array('post_type'=>'','paged' => get_query_var('paged')));
 		<span class="articles-date"><img src="<?php bloginfo('template_url'); ?>/images/articles-autor.jpg" alt="admin" /> <span><?php the_author(); ?></span> - <?php the_time('M jS, Y') ?></span>
 		<span class="articles-comments"><img src="<?php bloginfo('template_url'); ?>/images/articles-comment.jpg" alt="commets" /> <a href="#"><?php comments_popup_link(); ?></a></span>           
 	</div>
-	
 	<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	<?php the_excerpt(); ?>
-
 	<p><a href="<?php the_permalink(); ?>">Read More</a></p>
-	
 </div>
 <?php endwhile; ?>
-<?php endif?>
-
-
-
-
-
 			<div class="pager">
-				<?php posts_nav_link("<span> - </span>");?>
+				<?php wp_pagenavi( array( 'query' => $the_query) ); ?>
 			</div>
-		</div>
+<?php endif?>
 <?php wp_reset_postdata();?>
+		</div>
 			<?php get_sidebar();?>
-
 	</div>
 </div>
 <?php get_footer();?>
