@@ -1,5 +1,6 @@
 <div class="footer-info-wrapper">
 	<div class="footer-info-main">
+	<!--
 		<div class="footer-info">
 			<h3>about</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut purus odio, quis rutrum nibh. Etiam nec tellus malesuada odio tincidunt fringilla quis vitae nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla malesuada convallis. Morbi laoreet volutpat rhoncus.</p>
@@ -20,6 +21,21 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut purus odio, quis rutrum nibh. Etiam nec tellus malesuada odio tincidunt fringilla quis vitae nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla malesuada convallis.</p>
 			<p><a href="#">Contact Us Now</a></p>
 		</div>
+	-->
+		<?php if (!dynamic_sidebar('footer')):?>
+		<div class="footer-info">
+			<h3>Виджет</h3>
+			<p>Место для виджета</p>
+		</div>
+		<div class="footer-info">
+			<h3>Виджет</h3>
+			<p>Место для виджета</p>
+		</div>
+		<div class="footer-info">
+			<h3>Виджет</h3>
+			<p>Место для виджета</p>
+		</div>
+		<?php endif;?>
 	</div>
 </div>
 <div class="footer-copy">

@@ -268,3 +268,9 @@ body{
 .sidebar-widget li{
 	margin: 0 0 10px 0;
 }
+.footer-info .menu li{
+	float:none;
+}
+.footer-info .menu li a{
+	padding:0;
+}
