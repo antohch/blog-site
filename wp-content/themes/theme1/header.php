@@ -32,10 +32,15 @@
 <span>Это область меню, добавляемого из виджетов</span>
 <?php endif; ?>
 		<ul class ="ico-social">
+		<!--
 			<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/ico-vk.png" alt="мы вконтакте"/></a></li>
 			<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/ico-youtube.png" alt="мы на youtube"/></a></li>
 			<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/ico-facebook.png" alt="мы на facebook"/></a></li>
 			<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/ico-twitter.png" alt="наш твиттер"/></a></li>
+		-->
+			<?php if(!dynamic_sidebar('social')):?>
+				<span>Место для иконок с социальными сетями</span>
+			<?php endif?>
 		</ul>
 	</div>
 </div>

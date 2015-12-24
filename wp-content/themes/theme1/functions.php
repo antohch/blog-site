@@ -54,7 +54,14 @@ register_sidebar(array(
 					'before_title'  => '<h3>',
 					'after_title'   => '</h3>',
 					));
-					
+register_sidebar(array(
+					'name' => 'Social', 
+					'id' => 'social', 
+					//'before_widget' => '<div class="footer-info %2$s">',
+					//'after_widget'  => '</div>',
+					//'before_title'  => '<h3>',
+					//'after_title'   => '</h3>',
+					));
 /*
 * Банер
 */
