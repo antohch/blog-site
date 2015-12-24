@@ -42,6 +42,7 @@ body{
 	background: linear-gradient(to bottom, #f4f4f4 0%,#d8d8d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
 	margin-bottom:25px;
+	min-width:990px;
 }
 	.menu-main{
 		width:990px; margin:0 auto;
