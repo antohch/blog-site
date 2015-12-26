@@ -294,7 +294,7 @@ body{
 
 .comments-title,
 .comment-reply-title {
-	border-top: 4px solid #1a1a1a;
+	border-top: 4px solid #373737;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
@@ -321,7 +321,7 @@ body{
 
 .comment-list .children {
 	list-style: none;
-	margin: 0;
+	margin-left: 35px;
 }
 
 .comment-list .children > li {
@@ -479,23 +479,22 @@ body{
 
 .comment-reply-title small a {
 	border: 0;
-	float: right;
+	/* float: right; */
+	content:" | ";
 	height: 32px;
 	overflow: hidden;
 	width: 26px;
 }
+.comment-reply-title small a:before{
+	content:" | ";
 
+}
 .comment-reply-title small a:hover,
 .comment-reply-title small a:focus {
 	color: #1a1a1a;
 }
 
-.comment-reply-title small a:before {
-	content: "\f405";
-	font-size: 32px;
-	position: relative;
-	top: -5px;
-}
+
 
 .alignleft {
 	float: left;
@@ -511,4 +510,70 @@ body{
 	clear: both;
 	display: block;
 	margin: 0 auto 1.75em;
+}
+/**
+ * End 11.4 - Comments
+ */
+ 
+/*
+* Стиль комментариев
+*/
+.comment-body{
+	border-bottom:1px solid #ccc;
+	position:relative;
+	margin-bottom: 23px;
+	padding-bottom: 19px;
+}
+.comment-body:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.comment-author{
+	float:left;
+}
+.comment-author img{
+	float:left; margin-right:15px;
+}
+.comment-meta{
+	margin:15px;
+}
+.comment-meta a{
+	margin:10px;
+}
+.comments-area{
+	color: #373737;
+}
+.comments-area a{
+	color: #535353;
+}
+.fn{
+	font-style:normal;
+}
+.comment-body p{
+	margin-left:45px;
+}
+.reply{
+	position:absolute;
+	right:0;
+	top:0;
+}
+.reply a{
+	display: inline;
+}
+.comment-reply-title:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+
+
+@media screen and (min-width:1024px){
+	.head, .menu-main{
+		max-width:990px;
+		margin:15px auto;
+	}
+	.content-main, .footer-info-main, .footer-copy{
+		max-width:960px;
+	}
 }
