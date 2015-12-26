@@ -541,14 +541,15 @@ body{
 .comment-meta a{
 	margin:10px;
 }
-.comments-area{
+.comments-area, .commentlist{
 	color: #373737;
 }
-.comments-area a{
+.comments-area a, .commentlist a{
 	color: #535353;
 }
 .fn{
 	font-style:normal;
+	float:left;
 }
 .comment-body p{
 	margin-left:45px;
