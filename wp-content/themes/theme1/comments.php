@@ -1,4 +1,6 @@
 <ul class="commentlist">
+	<h3 class="comment-reply-title">Комментарии:</h3>
+	<h4>всего <?php echo wp_count_comments()->total_comments; ?></h2>
 	<?php wp_list_comments( 'type=comment&callback=mytheme_comment' ); ?>
 	<?php $arg = array ( 
 				fields => array(
