@@ -568,7 +568,68 @@ body{
 	display:block;
 }
 
+/*
+*Слайдер
+*/
+*{
+	padding:0; margin:0;
+}
+img{
+	border:none;
+}
 
+.features{
+	margin-bottom:30px; position:relative;
+}
+	.features img{
+		width:100%;
+	}
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+.rslides_tabs{
+	list-style:none; font-size:12px; float:right; margin:-40px 15px 0 0; position:relative; z-index:20;
+}
+.rslides_tabs li{
+	float:left;
+}
+.rslides_tabs li a{
+	background:#eb4900; color:#fff; margin:0 5px; display:block; padding:5px 7px; text-decoration:none;
+} 
+.rslides_tabs li.rslides_here a{
+	background:#e6e6e6; color:#373737;
+}
+/*
+* Конец слайдера
+*/
 @media screen and (min-width:1024px){
 	.head, .menu-main{
 		max-width:990px;

@@ -2,20 +2,17 @@
 <div class="content-wrapper">
 	<div class="content-main">
 		<div class="content">
-			<div id='slideshowHolder'>    
-			<!--
-				<img src="<?php bloginfo('template_url'); ?>/images/img1.jpg" alt='' />            
-				<img src="<?php bloginfo('template_url'); ?>/images/img1.jpg" alt='' />            
-				<img src="<?php bloginfo('template_url'); ?>/images/img1.jpg" alt='' />         
-			-->
+			<div id='slideshowHolder' class="features">    
+				<ul class="rslides">
 				<?php $slider = new WP_Query(array('post_type' => 'slider', 'order' => 'ASC'));?>
 				<?php if($slider->have_posts()): while($slider->have_posts()): $slider->the_post();?>
-					<?php the_post_thumbnail('full'); ?>
+					<li><?php the_post_thumbnail('full'); ?></li>
 				<?php endwhile;?>
 				<?php else:?>
 					<p>место для слайдера 594х279<p/>
 				<?php endif;?>
-				<?php wp_reset_postdata();?>			
+				<?php wp_reset_postdata();?>
+				</ul>
 			</div>
 <?php if(have_posts()): while(have_posts()): the_post();?>
 <div class="articles">
