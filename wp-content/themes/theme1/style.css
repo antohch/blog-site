@@ -666,3 +666,35 @@ img{
 		max-width:960px;
 	}
 }
+@media screen and (max-width:800px){
+	.head-logo{
+		float:none; margin: 10px 0; width:100%; text-align:center;
+	}
+	.head-banner{
+		/*float:none;
+		width:100%;
+		text-align:center;*/
+		display:none;
+	}
+	.content{
+		float:none; width:100%;
+	}
+	.sidebar-main{
+		float:none; width:100%;
+	}
+	#ads-main li{
+		float:left; line-height:0px; margin:0 2.5%; width:20%;
+	}
+	#ads-main li img{
+		width:100%;
+	}
+	.sidebar-widget:nth-child(3){
+		width:48%; float:left;
+	}
+	.sidebar-widget:nth-child(4){
+		width:48%; float:right;
+	}
+	.sidebar-widget:nth-child(5){
+		float:none; clear:both; text-align:center;
+	}
+}
