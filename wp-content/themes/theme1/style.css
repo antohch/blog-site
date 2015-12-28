@@ -633,7 +633,7 @@ img{
 @media screen and (min-width:1024px){
 	.head, .menu-main{
 		max-width:990px;
-		margin:15px auto;
+		margin:0 auto;
 	}
 	.content-main, .footer-info-main, .footer-copy{
 		max-width:960px;
