@@ -22,16 +22,21 @@ body{
 	.head{
 		margin:0 auto; padding:15px 0;
 	}
+		.head img{
+			max-width:100%;
+			height:auto;
+		}
 		.head:after{
 			content:"";
 			clear:both;
 			display:block;
 		}
 		.head-logo{
-			float:left; margin: 25px 0 0 0;
+			float:left; margin: 25px 0 0 0; width:26%;
 		}
 		.head-banner{
 			float:right;
+			width:73.5%;
 		}
 .menu-wrapper{
 	width:100%; border-top:1px solid #d8d8d8; padding:1px 0 2px 0;
@@ -42,7 +47,6 @@ body{
 	background: linear-gradient(to bottom, #f4f4f4 0%,#d8d8d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
 	margin-bottom:25px;
-	min-width:990px;
 }
 	.menu-main{
 		margin:0 auto;
@@ -178,6 +182,9 @@ body{
 				.sidebar-widget h3{
 					font-size:20px; color:#01b2bf; border-bottom:7px solid #e6e6e6; margin:0 0 10px 0; text-transform:uppercase;
 				}
+				.facebook img{
+					max-width:100%;
+				}
 				.search-main{
 					border:5px solid #e6e6e6; color:#535353; font-size:12px; padding:1px 0;
 				}
@@ -187,10 +194,13 @@ body{
 						display:block;
 					}
 				.search-txt{
-					padding:5px 15px; width:225px; border:none;
+					padding:5px 15px; width:70%; border:none;
 				}
-				.search-main input{
+				.search-main input[type=text]{
 					float:left;
+				}
+				.search-main input[type=image]{
+					float:right; margin-right:5px;
 				}
 			#ads-main{
 				background:#f3f3f3; padding: 17px 0 0 0;
@@ -201,7 +211,10 @@ body{
 					display:block;
 				}
 				#ads-main li{
-					float:left; line-height:0px; margin:0 0 17px 17px;
+					float:left; line-height:0px; margin:0 0 17px 5.6%; width:41.6%;
+				}
+				#ads-main li img{
+					max-width:100%;
 				}
 			.side-categories{
 				width:50%; float:left
