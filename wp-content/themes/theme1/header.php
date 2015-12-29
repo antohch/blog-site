@@ -25,6 +25,26 @@
 			  namespace: "rslides",   // String: Change the default namespace used
 			  before: function(){},   // Function: Before callback
 			  after: function(){}     // Function: After callback
+			  
+			  
+			  
+			  
+			  
+			var pull 		= $('#pull');
+				menu 		= $('.menu-main ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
 			});
 			
 		});
@@ -48,13 +68,16 @@
 </div>
 <div class="menu-wrapper">
 	<div class="menu-main">
-<?php if(!dynamic_sidebar('menu_header')): ?>
-<span>Это область меню, добавляемого из виджетов</span>
-<?php endif; ?>
-		<ul class ="ico-social">
-			<?php if(!dynamic_sidebar('social')):?>
-				<span>Место для иконок с социальными сетями</span>
-			<?php endif?>
-		</ul>
+		<div class="menu-screen">
+			<?php if(!dynamic_sidebar('menu_header')): ?>
+			<span>Это область меню, добавляемого из виджетов</span>
+			<?php endif; ?>
+			<ul class ="ico-social">
+				<?php if(!dynamic_sidebar('social')):?>
+					<span>Место для иконок с социальными сетями</span>
+				<?php endif?>
+			</ul>
+			<a id="pull" href="#">Меню</a>
+		</div>
 	</div>
 </div>
