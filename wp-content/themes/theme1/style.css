@@ -698,3 +698,37 @@ img{
 		float:none; clear:both; text-align:center;
 	}
 }
+
+@media screen and (max-width:480px){
+	.articles-head{
+		display:none;
+	}
+	.articles-gen-img{
+		width:30%;
+	}	
+	.articles-gen-img img{
+		max-width:100%;
+		height:auto;
+	}
+	#ads-main li{
+		float:left; line-height:0px; margin:0 2.5% 17px; width:45%;
+	}
+	#ads-main li img{
+		width:100%;
+	}
+	.sidebar-widget:nth-child(3){
+		width:100%; float:none;
+	}
+	.sidebar-widget:nth-child(4){
+		width:100%; float:none;
+	}
+	.sidebar-widget:nth-child(5){
+		float:none; text-align:center;
+	}
+	.footer-info, .footer-info:nth-last-child(1){
+		float:none; width:100%; margin:0 3% 20px;
+	}
+	.menu{
+		float:none;
+	}
+}
