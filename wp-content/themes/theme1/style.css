@@ -753,11 +753,12 @@ img{
 	}
 
 	.menu-screen .menu{
-		width:70%;
+		width:100%;
 		float:left;
 	}
 	.ico-social li{
 		float:right;
+		margin: 5px 0 0 10px;
 	}
 	.menu-screen ul li{
 		/*width:100%;*/
@@ -784,10 +785,47 @@ img{
 	}	
 	.ico-social{
 		width:30%;
-	}
-	.menu li{
-		float:left;
-		width:50%;
+		float:right;
+		position:absolute; top:0; right:0; display:block;
 	}
 
+	.menu li{
+		float:left;
+		width:25%;
+	}
+
+	.head{
+		margin: 26px auto 0;
+	}
+}
+@media screen and (max-width:800px){
+	.ico-social{
+		position:absolute; top:0; right:0; display:block;
+	}
+
+}
+@media screen and (max-width:592px){
+	.head-logo{
+		text-align:left;
+	}
+	.ico-social{
+		width:50%;
+	}
+	.ico-social li{
+		
+	}
+	.menu li{
+		width:50%;
+	}
+}
+@media screen and (max-width:375px){
+	.head-logo{
+		text-align: center;
+	}
+	.ico-social{
+		width:100%;
+	}
+	.menu li{
+		width:100%;
+	}
 }

@@ -31,7 +31,7 @@
 		  
 		  
 		var pull 		= $('#pull');
-			menu 		= $('.menu-main ul');
+			menu 		= $('.menu-main .menu');
 			menuHeight	= menu.height();
 
 		$(pull).on('click', function(e) {
