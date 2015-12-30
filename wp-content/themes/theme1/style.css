@@ -753,13 +753,11 @@ img{
 	}
 
 	.menu-screen .menu{
-		width:50%;
+		width:70%;
 		float:left;
 	}
 	.ico-social li{
-		width:10px;
-		float:none;
-		margin:0 0 5px 0;
+		float:right;
 	}
 	.menu-screen ul li{
 		/*width:100%;*/
@@ -785,11 +783,11 @@ img{
 		right:3%;
 	}	
 	.ico-social{
-		width:40px;
+		width:30%;
 	}
 	.menu li{
-		float:none;
-		width:100%;
+		float:left;
+		width:50%;
 	}
 
 }
