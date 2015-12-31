@@ -5,10 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php bloginfo('name'); wp_title();?></title>
 <?php wp_head();?>
-
-
 </head>
-
 <body>
 <div class="head-wrapper">
 	<div class="head">
